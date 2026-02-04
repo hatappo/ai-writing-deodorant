@@ -1,0 +1,9 @@
+[package]
+name = "deo-core"
+version = "0.1.0"
+edition = "2021"
+description = "Core library for ai-writing-deodorant"
+license = "MIT"
+
+[dependencies]
+regex = "1.12"

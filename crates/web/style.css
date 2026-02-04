@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Georgia", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    background: #f5f0e8;
+    min-height: 100vh;
+    padding: 2rem;
+    color: #4a4540;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.header-content {
+    flex: 1;
+    text-align: center;
+}
+
+h1 {
+    color: #5c534a;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+
+.subtitle {
+    color: #8a817a;
+    font-style: italic;
+}
+
+.lang-btn {
+    padding: 0.4rem 0.8rem;
+    background: transparent;
+    color: #6b635a;
+    border: 1px solid #d4cbc0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: inherit;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.lang-btn:hover {
+    border-color: #a08060;
+    color: #5c534a;
+    background: #faf8f5;
+}
+
+.panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .panels {
+        grid-template-columns: 1fr;
+    }
+}
+
+.panel {
+    background: #faf8f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(90, 80, 70, 0.1);
+    border: 1px solid #e8e2d9;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #f0ebe3;
+    border-bottom: 1px solid #e8e2d9;
+    font-weight: 600;
+    color: #5c534a;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #6b635a;
+}
+
+.toggle input {
+    cursor: pointer;
+    accent-color: #a08060;
+}
+
+textarea {
+    width: 100%;
+    min-height: 300px;
+    padding: 1rem;
+    border: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.8;
+    background: #fffefa;
+    color: #4a4540;
+    overflow: hidden;
+}
+
+textarea::placeholder {
+    color: #b5a99a;
+    font-style: italic;
+}
+
+textarea:focus {
+    outline: none;
+    background: #fffff8;
+}
+
+.output {
+    padding: 1rem;
+    min-height: 300px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #4a4540;
+    background: #fffefa;
+    flex: 1;
+}
+
+.file-upload {
+    display: inline-block;
+}
+
+.file-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d4cbc0;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #6b635a;
+    background: #fffefa;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.file-label:hover {
+    border-color: #a08060;
+    color: #5c534a;
+    background: #f5f0e8;
+}
+
+.file-label input {
+    display: none;
+}
+
+.copy-btn {
+    padding: 0.4rem 0.8rem;
+    background: #a08060;
+    color: #fffefa;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.copy-btn:hover {
+    background: #8a6d50;
+}
+
+.copy-btn:active {
+    background: #745a40;
+}
+
+.footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #a09080;
+}

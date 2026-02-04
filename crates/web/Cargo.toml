@@ -1,0 +1,16 @@
+[package]
+name = "deo-web"
+version = "0.1.0"
+edition = "2021"
+description = "Web interface for ai-writing-deodorant"
+license = "MIT"
+
+[dependencies]
+deo-core = { path = "../core" }
+leptos = { version = "0.6", features = ["csr"] }
+web-sys = { version = "0.3", features = ["File", "FileList", "FileReader", "HtmlInputElement", "DragEvent", "DataTransfer", "Clipboard", "Navigator"] }
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+js-sys = "0.3"
+gloo-timers = { version = "0.3", features = ["futures"] }
+console_error_panic_hook = "0.1"

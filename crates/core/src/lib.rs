@@ -1,28 +1,10 @@
-use clap::Parser;
 use regex::Regex;
-use std::fs;
-use std::io::{self, Read};
-use std::path::PathBuf;
 
-#[derive(Parser)]
-#[command(name = "deo")]
-#[command(about = "Remove AI-like formatting from text files")]
-#[command(version)]
-struct Cli {
-    /// Input file path (use '-' for stdin)
-    #[arg(value_name = "FILE")]
-    input: PathBuf,
-
-    /// Remove emoji characters
-    #[arg(long)]
-    emoji: bool,
-}
-
-fn remove_bold_markers(text: &str) -> String {
+pub fn remove_bold_markers(text: &str) -> String {
     text.replace("**", "")
 }
 
-fn remove_emojis(text: &str) -> String {
+pub fn remove_emojis(text: &str) -> String {
     let emoji_pattern = Regex::new(concat!(
         "[",
         "\u{1F600}-\u{1F64F}", // Emoticons
@@ -95,30 +77,13 @@ fn remove_emojis(text: &str) -> String {
     emoji_pattern.replace_all(text, "").to_string()
 }
 
-fn process_text(text: &str, remove_emoji: bool) -> String {
+pub fn process_text(text: &str, remove_emoji: bool) -> String {
     let result = remove_bold_markers(text);
     if remove_emoji {
         remove_emojis(&result)
     } else {
         result
     }
-}
-
-fn main() -> io::Result<()> {
-    let cli = Cli::parse();
-
-    let content = if cli.input.to_string_lossy() == "-" {
-        let mut buffer = String::new();
-        io::stdin().read_to_string(&mut buffer)?;
-        buffer
-    } else {
-        fs::read_to_string(&cli.input)?
-    };
-
-    let result = process_text(&content, cli.emoji);
-    print!("{}", result);
-
-    Ok(())
 }
 
 #[cfg(test)]
@@ -144,10 +109,7 @@ mod tests {
 
     #[test]
     fn test_process_text() {
-        assert_eq!(
-            process_text("**bold** 😀 text", false),
-            "bold 😀 text"
-        );
+        assert_eq!(process_text("**bold** 😀 text", false), "bold 😀 text");
         assert_eq!(process_text("**bold** 😀 text", true), "bold  text");
     }
 }
