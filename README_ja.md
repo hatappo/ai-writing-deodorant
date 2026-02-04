@@ -1,4 +1,4 @@
-# ai-deodorant
+# ai-writing-deodorant
 
 テキストファイルからAIっぽい書式を削除するCLIツール。
 
@@ -19,13 +19,13 @@ cargo install --path .
 
 ```bash
 # ファイルを処理
-ai-deodorant input.txt
+deo input.txt
 
 # 標準入力から読み込み
-echo "**太字** テキスト" | ai-deodorant -
+echo "**太字** テキスト" | deo -
 
 # 絵文字も削除
-ai-deodorant input.txt --emoji
+deo input.txt --emoji
 ```
 
 ## ライセンス

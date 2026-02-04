@@ -43,21 +43,21 @@ jobs:
         if: matrix.os != 'windows-latest'
         run: |
           cd target/${{ matrix.target }}/release
-          tar czf ../../../ai-deodorant-${{ matrix.target }}.tar.gz ai-deodorant
+          tar czf ../../../deo-${{ matrix.target }}.tar.gz deo
           cd ../../..
 
       - name: Package (Windows)
         if: matrix.os == 'windows-latest'
         run: |
           cd target/${{ matrix.target }}/release
-          7z a ../../../ai-deodorant-${{ matrix.target }}.zip ai-deodorant.exe
+          7z a ../../../deo-${{ matrix.target }}.zip deo.exe
           cd ../../..
 
       - name: Upload artifact
         uses: actions/upload-artifact@v6
         with:
-          name: ai-deodorant-${{ matrix.target }}
-          path: ai-deodorant-${{ matrix.target }}.${{ matrix.archive }}
+          name: deo-${{ matrix.target }}
+          path: deo-${{ matrix.target }}.${{ matrix.archive }}
 
   release:
     name: Create Release

@@ -1,10 +1,14 @@
 [package]
-name = "ai-deodorant"
+name = "ai-writing-deodorant"
 version = "0.1.0"
 edition = "2021"
 description = "Remove AI-like formatting from text files"
 license = "MIT"
 repository = "https://github.com/fumi/ai-writing-deodorant"
+
+[[bin]]
+name = "deo"
+path = "src/main.rs"
 
 [dependencies]
 clap = { version = "4.5", features = ["derive"] }

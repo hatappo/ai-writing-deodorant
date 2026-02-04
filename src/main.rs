@@ -5,7 +5,7 @@ use std::io::{self, Read};
 use std::path::PathBuf;
 
 #[derive(Parser)]
-#[command(name = "ai-deodorant")]
+#[command(name = "deo")]
 #[command(about = "Remove AI-like formatting from text files")]
 #[command(version)]
 struct Cli {

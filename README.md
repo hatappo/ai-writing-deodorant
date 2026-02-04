@@ -1,6 +1,6 @@
 [日本語](README_ja.md)
 
-# ai-deodorant
+# ai-writing-deodorant
 
 A CLI tool to remove AI-like formatting from text files.
 
@@ -21,13 +21,13 @@ cargo install --path .
 
 ```bash
 # Process a file
-ai-deodorant input.txt
+deo input.txt
 
 # Read from stdin
-echo "**bold** text" | ai-deodorant -
+echo "**bold** text" | deo -
 
 # Remove emojis as well
-ai-deodorant input.txt --emoji
+deo input.txt --emoji
 ```
 
 ## License
