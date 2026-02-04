@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "Remove AI-like formatting from text files"
 license = "MIT"
-repository = "https://github.com/fumi/ai-writing-deodorant"
+repository = "https://github.com/hatappo/ai-writing-deodorant"
 
 [[bin]]
 name = "deo"

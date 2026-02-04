@@ -9,7 +9,7 @@
 
 ## インストール
 
-[Releases](https://github.com/fumi/ai-writing-deodorant/releases) からバイナリをダウンロードするか、ソースからビルド：
+[Releases](https://github.com/hatappo/ai-writing-deodorant/releases) からバイナリをダウンロードするか、ソースからビルド：
 
 ```bash
 cargo install --path .

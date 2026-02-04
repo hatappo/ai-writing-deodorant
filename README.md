@@ -11,7 +11,7 @@ A CLI tool to remove AI-like formatting from text files.
 
 ## Installation
 
-Download the binary from [Releases](https://github.com/fumi/ai-writing-deodorant/releases) or build from source:
+Download the binary from [Releases](https://github.com/hatappo/ai-writing-deodorant/releases) or build from source:
 
 ```bash
 cargo install --path .
