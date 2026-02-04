@@ -17,6 +17,21 @@ cargo install --path .
 
 ## 使い方
 
+```
+$ deo --help
+Remove AI-like formatting from text files
+
+Usage: deo [OPTIONS] <FILE>
+
+Arguments:
+  <FILE>  Input file path (use '-' for stdin)
+
+Options:
+      --emoji    Remove emoji characters
+  -h, --help     Print help
+  -V, --version  Print version
+```
+
 ```bash
 # ファイルを処理
 deo input.txt
